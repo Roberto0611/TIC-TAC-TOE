@@ -1,22 +1,22 @@
-// Obtiene el elemento del tablero
+//Get board element
 const boardContainer = document.getElementById('board');
 
-// Define el tamaño del tablero (3x3 en este caso)
+// Define the board (3x3)
 const boardSize = 3;
 
-// Genera las celdas del tablero usando un bucle anidado
+// Generate the board with loops
 for (let i = 0; i < boardSize; i++) {
     for (let j = 0; j < boardSize; j++) {
-        // Crea un elemento div para representar cada celda
+        // Create a div ( cell)
         const cell = document.createElement('div');
 
-        // Asigna una clase "cell" a cada celda
+        //add Cell class to the div
         cell.classList.add('cell');
 
-        // Agrega un identificador único a cada celda (por ejemplo, "cell-0-0", "cell-0-1", etc.)
+        //Add an ID to the cell
         cell.id = `cell-${i}-${j}`;
 
-        // Agrega la celda al tablero
+        // add the cell to the board
         boardContainer.appendChild(cell);
     }
 }
