@@ -1,3 +1,6 @@
+//
+arrayCells = [[]];
+
 //Get board element
 const boardContainer = document.getElementById('board');
 
@@ -18,5 +21,6 @@ for (let i = 0; i < boardSize; i++) {
 
         // add the cell to the board
         boardContainer.appendChild(cell);
+        arrayCells.push(document.getElementById(`cell-${i}-${j}`));
     }
 }
