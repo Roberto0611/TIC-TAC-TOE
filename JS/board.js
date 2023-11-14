@@ -1,5 +1,5 @@
 //
-arrayCells = [[]];
+arrayCells = [];
 
 //Get board element
 const boardContainer = document.getElementById('board');

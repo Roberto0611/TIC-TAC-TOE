@@ -16,5 +16,5 @@ function draw(index){
     })
 }
 arrayCells.forEach(function(index) {
-    draw(index + 1 );
+    draw(index);
 }); 
