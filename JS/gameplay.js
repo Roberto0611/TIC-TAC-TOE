@@ -16,12 +16,15 @@ function draw(index){
     index.addEventListener('click',function(){ //Add event listener to all the cells
         index.textContent = actualTurn; //Draw the X or O
 
-        if(actualTurn == turns[0]){// Change turn logic
+        // Change turn logic
+        if(actualTurn == turns[0]){
             actualTurn = turns[1];
             turnstext.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+            tieLogic();
         }else{
             actualTurn = turns[0];
             turnstext.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+            tieLogic();
         }
     })
 }
