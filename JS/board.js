@@ -1,4 +1,5 @@
-//
+//Script by: Roberto Ochoa Cuevas
+
 arrayCells = [];
 
 //Get board element

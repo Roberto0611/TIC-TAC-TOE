@@ -7,9 +7,9 @@ let cell = [];
 //Set turns and get turns text to display it
 turns = ['x','o'];
 actualTurn = turns[0]; 
-turnstext = document.getElementById('turnText');
+turnsText = document.getElementById('turnText');
 //Set the text to show the actual turn
-turnstext.textContent = "it's" + " "+ actualTurn + " " +"turn" ;
+turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ;
 
 //Function to show te X's and the O's
 function draw(index){
@@ -19,12 +19,12 @@ function draw(index){
         // Change turn logic
         if(actualTurn == turns[0]){
             actualTurn = turns[1];
-            turnstext.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+            turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
             cellsUsed++;
             tieLogic();
         }else{
             actualTurn = turns[0];
-            turnstext.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+            turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
             cellsUsed++;
             tieLogic();
         }
