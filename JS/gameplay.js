@@ -20,10 +20,12 @@ function draw(index){
         if(actualTurn == turns[0]){
             actualTurn = turns[1];
             turnstext.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+            cellsUsed++;
             tieLogic();
         }else{
             actualTurn = turns[0];
             turnstext.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+            cellsUsed++;
             tieLogic();
         }
     })
