@@ -19,15 +19,17 @@ function draw(index){
             // Change turn logic
             if(actualTurn == turns[0]){
                 actualTurn = turns[1];
-                turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
-                cellsUsed++;
-                winner()
             }else{
                 actualTurn = turns[0];
-                turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
-                cellsUsed++;
-                winner();
             }
+
+            turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+            cellsUsed++; //Add 1 to the cells Used
+
+            setTimeout(function () { //Set time Out To Draw first and then announce the winner. 
+                winner();
+            }, 0);
+
         }else{ //If the cell isn't blank:
             alert("This cell is already in use");
         }
