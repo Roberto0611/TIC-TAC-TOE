@@ -10,8 +10,7 @@ function winner() {
         arrayCells[i * 3].textContent === arrayCells[i * 3 + 2].textContent//Check if the cell has the same content as the one at the side
       ) {
         let winner =  arrayCells[i * 3].textContent;
-        alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
-        resetGame();
+        alertWinner(winner); //Alert winner and reset game
         return;
       }
     }
@@ -23,8 +22,7 @@ function winner() {
         arrayCells[i].textContent === arrayCells[i + 6].textContent
       ) {
         let winner =  arrayCells[i+3].textContent;
-        alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
-        resetGame();
+        alertWinner(winner); //Alert winner and reset game
         return;
       }
     }
@@ -37,8 +35,7 @@ function winner() {
         arrayCells[2].textContent == arrayCells[6].textContent
     ) {
         let winner =  arrayCells[2].textContent;
-        alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
-        resetGame();
+        alertWinner(winner); //Alert winner and reset game
         return;
     }
     if(
@@ -49,8 +46,7 @@ function winner() {
         arrayCells[0].textContent == arrayCells[8].textContent
     ) {
         let winner =  arrayCells[0].textContent;
-        alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
-        resetGame();
+        alertWinner(winner); //Alert winner and reset game
         return;
     }
 
@@ -60,7 +56,6 @@ function winner() {
 //Tie logic
 function tieLogic(){
     if (cellsUsed == 9) {
-        alert("ITS A TIE");
-        resetGame()
+        alertTie();
     }
 };
