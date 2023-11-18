@@ -21,12 +21,12 @@ function draw(index){
                 actualTurn = turns[1];
                 turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
                 cellsUsed++;
-                tieLogic();
+                winner()
             }else{
                 actualTurn = turns[0];
                 turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
                 cellsUsed++;
-                tieLogic();
+                winner();
             }
         }else{ //If the cell isn't blank:
             alert("This cell is already in use");
