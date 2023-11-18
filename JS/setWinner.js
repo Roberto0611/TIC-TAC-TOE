@@ -11,6 +11,7 @@ function winner() {
       ) {
         let winner =  arrayCells[i * 3].textContent;
         alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
+        resetGame();
         return;
       }
     }
@@ -23,6 +24,7 @@ function winner() {
       ) {
         let winner =  arrayCells[i+3].textContent;
         alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
+        resetGame();
         return;
       }
     }
@@ -36,6 +38,7 @@ function winner() {
     ) {
         let winner =  arrayCells[2].textContent;
         alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
+        resetGame();
         return;
     }
     if(
@@ -47,6 +50,7 @@ function winner() {
     ) {
         let winner =  arrayCells[0].textContent;
         alert('WINNER WINNER CHICKEN DINNER' + ' ' + winner + " " + "it's the winner"); //Alert winner
+        resetGame();
         return;
     }
 
@@ -57,5 +61,6 @@ function winner() {
 function tieLogic(){
     if (cellsUsed == 9) {
         alert("ITS A TIE");
+        resetGame()
     }
 };
