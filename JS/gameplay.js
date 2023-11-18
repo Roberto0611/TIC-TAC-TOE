@@ -14,19 +14,22 @@ turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ;
 //Function to show te X's and the O's
 function draw(index){
     index.addEventListener('click',function(){ //Add event listener to all the cells
-        index.textContent = actualTurn; //Draw the X or O
-
-        // Change turn logic
-        if(actualTurn == turns[0]){
-            actualTurn = turns[1];
-            turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
-            cellsUsed++;
-            tieLogic();
-        }else{
-            actualTurn = turns[0];
-            turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
-            cellsUsed++;
-            tieLogic();
+        if (index.textContent == '') { //Check if the cell is in blank
+            index.textContent = actualTurn; //Draw the X or O
+            // Change turn logic
+            if(actualTurn == turns[0]){
+                actualTurn = turns[1];
+                turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+                cellsUsed++;
+                tieLogic();
+            }else{
+                actualTurn = turns[0];
+                turnsText.textContent = "it's" + " "+ actualTurn + " " +"turn" ; //display next turn
+                cellsUsed++;
+                tieLogic();
+            }
+        }else{ //If the cell isn't blank:
+            alert("This cell is already in use");
         }
     })
 }
